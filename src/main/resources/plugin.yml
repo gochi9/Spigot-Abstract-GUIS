@@ -1,0 +1,15 @@
+name: Spigot-Abstract-GUIS
+version: 1.0
+main: com.deadshotmdf.spigot_abstract_GUIS.S_A_GUIS
+api-version: 1.19
+authors: [ DeadshotMDF ]
+libraries:
+  - org.reflections:reflections:0.10.2
+commands:
+  abstractguis:
+    description: Reloads the plugin.
+
+  shop:
+    description: Opens the main shop GUI if present.
+  sellall:
+    description: Sells everything of value from your inventory.
