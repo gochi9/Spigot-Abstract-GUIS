@@ -164,7 +164,7 @@ public class GUIUtils {
 
             String actionValue = action.value();
 
-            if (actionValue == null || actionValue.trim().isEmpty())
+            if (actionValue == null || actionValue.isBlank())
                 continue;
 
             buttonMap.put(actionValue, (itemStack, correspondantManager, guiManager, args, map) -> {
