@@ -97,11 +97,6 @@ public abstract class AbstractButton<T extends AbstractGUIManager> implements Gu
     }
 
     @Override
-    public void addInitialMark(NamespacedKey key, PersistentDataType<?, ?> type, Object value) {
-        this.item = getItemStackMarkedAndReplaced(key, type, value, null);
-    }
-
-    @Override
     public boolean canClick(HumanEntity player) {
         if (permission.isBlank() || player.hasPermission(permission))
             return true;
@@ -116,7 +111,7 @@ public abstract class AbstractButton<T extends AbstractGUIManager> implements Gu
         return new ArrayList<>(lore);
     }
 
-    private List<String> replaceLore(List<String> loreList, String[] placeholders, String... replacements) {
+    private static List<String> replaceLore(List<String> loreList, String[] placeholders, String... replacements) {
         List<String> replacedLore = new ArrayList<>(loreList.size());
         for (String line : loreList)
             replacedLore.add(StringUtils.replaceEach(line, placeholders, replacements));

@@ -14,8 +14,7 @@ public interface GuiElement {
     ItemStack getItemStackClone();
     ItemStack getItemStackClone(String[] placeholder, String... replace);
     ItemStack getItemStackClone(ItemStack clone, String[] placeholder, String... replace);
-    ItemStack getItemStackMarkedAndReplaced(NamespacedKey key, PersistentDataType<?, ?> type, Object value, String[] placeholders, String... replacements);
-    void addInitialMark(NamespacedKey key, PersistentDataType<?, ?> type, Object value);
+    ItemStack getItemStackMarkedAndReplaced(NamespacedKey key, PersistentDataType type, Object value, String[] placeholders, String... replacements);
     boolean canClick(HumanEntity player);
     void onClick(InventoryClickEvent ev, GUI gui, Map<String, Object> GUIArgs, Map<String, Object> extraArgs);
 
